@@ -1,0 +1,70 @@
+:root { color-scheme: light dark;
+  --bg: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e;
+  --muted: #6b6a66; --line: #e1e0d9; --accent: #2a78d6; --accent-soft: #e8f1fc;
+  --warn: #b25b00; }
+@media (prefers-color-scheme: dark) { :root {
+  --bg: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7;
+  --muted: #9a998f; --line: #2c2c2a; --accent: #6aa5ef; --accent-soft: #17283d;
+  --warn: #f0a24a; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; }
+a { color: var(--accent); }
+header.top { background: var(--surface); border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline;
+  padding-top: 12px; padding-bottom: 12px; }
+header.top .brand { font-weight: 600; margin-right: auto; }
+nav a { text-decoration: none; color: var(--ink2); padding: 2px 0; }
+nav a[aria-current] { color: var(--accent); font-weight: 600; }
+nav { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 15px; }
+.wrap { max-width: 980px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+main { padding-bottom: 48px; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 28px 0 8px; }
+h2 { font-size: 1.3rem; margin: 36px 0 10px; padding-top: 8px; border-top: 1px solid var(--line); }
+h3 { font-size: 1.05rem; margin: 22px 0 6px; }
+.lede { color: var(--ink2); font-size: 1.05rem; margin-top: 0; }
+.question { background: var(--accent-soft); border-left: 4px solid var(--accent);
+  padding: 12px 16px; border-radius: 6px; margin: 16px 0; }
+.question .label { display: block; font-size: .8rem; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--ink2); font-weight: 600; }
+.question .decision { margin-top: 10px; }
+.answer { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #1baf7a;
+  border-radius: 6px; padding: 4px 16px; }
+strong { font-weight: 700; }
+/* Charts may extend past the 980px text column on wide screens so their labels stay readable. */
+figure { width: min(1240px, calc(100vw - 48px)); position: relative; left: 50%; transform: translateX(-50%); }
+@media (max-width: 1020px) { figure { width: auto; left: auto; transform: none; } }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+.card h3 { margin-top: 0; }
+.card p { margin: 6px 0; }
+.stat { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 14px 0; }
+.stat div { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+.stat b { display: block; font-size: 1.35rem; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--ink2); font-size: .85rem; }
+figure { margin: 18px 0; }
+figure img { width: 100%; height: auto; display: block; border: 1px solid var(--line);
+  border-radius: 6px; background: #fcfcfb; }
+figcaption { color: var(--ink2); font-size: .9rem; margin-top: 6px; }
+.table-wrap { overflow-x: auto; margin: 12px 0; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+th, td { padding: 6px 10px; border-bottom: 1px solid var(--line); text-align: right;
+  white-space: nowrap; font-variant-numeric: tabular-nums; }
+th:first-child, td:first-child, th.l, td.l { text-align: left; }
+td.wrap-cell { white-space: normal; min-width: 180px; text-align: left; }
+thead th { background: var(--bg); position: sticky; top: 0; }
+tr.total td { font-weight: 600; }
+.note { color: var(--muted); font-size: .88rem; }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
+  padding: 8px 14px; margin: 12px 0; }
+summary { cursor: pointer; font-weight: 600; }
+code, .formula { font-family: ui-monospace, Consolas, monospace; font-size: .9em; }
+.formula { display: block; overflow-x: auto; padding: 8px 10px; background: var(--bg);
+  border-radius: 4px; margin: 8px 0; white-space: pre-wrap; }
+ul.tight li { margin: 4px 0; }
+.limits li { color: var(--ink2); }
+.pass { color: #0c7a0c; font-weight: 600; }
+@media (prefers-color-scheme: dark) { .pass { color: #4ccf4c; } }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; padding: 18px 0 30px; }
+@media (max-width: 600px) { h1 { font-size: 1.5rem; } body { font-size: 15px; } }
