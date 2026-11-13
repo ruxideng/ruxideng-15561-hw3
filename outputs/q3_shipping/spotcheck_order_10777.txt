@@ -1,0 +1,9 @@
+抽查订单：OrderID = 10777
+  客户 GOURL，收货国家 Brazil，承运商 ShipVia=2（2 United Package）
+  OrderDate    = 1997-12-15  （Excel 日期序列号 35779）
+  RequiredDate = 1997-12-29  （序列号 35793）
+  ShippedDate  = 1998-01-21  （序列号 35816）
+  发货耗时 = 35816 − 35779 = 37 天；脚本结果 37 天
+  要求期限 = 35793 − 35779 = 14 天
+  ShippedDate > RequiredDate？35816 > 35793 → 是，计为发货晚于要求日期
+  在 Excel 中复核：Orders 表找到该 OrderID，把三个日期单元格格式改为“常规”即可看到序列号，用 ShippedDate − OrderDate 得到天数。

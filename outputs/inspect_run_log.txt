@@ -1,0 +1,215 @@
+﻿====================================================================== 
+1. SHEETS
+
+[Categories] rows=8 (excl. header) cols=4
+    - [1] 'CategoryID': non-null=8/8 types=['float'] sample=[1.0, 2.0, 3.0]
+    - [2] 'CategoryName': non-null=8/8 types=['str'] sample=['Beverages', 'Condiments', 'Confections']
+    - [3] 'Description': non-null=8/8 types=['str'] sample=['Soft drinks, coffees, teas, beers, and ales', 'Sweet and savory sauces, relishes, spreads, and seasonings', 'Desserts, candies, and sweet breads']
+    - [4] 'Picture': non-null=0/8 types=[] sample=[]
+
+[Customers] rows=91 (excl. header) cols=11
+    - [1] 'CustomerID': non-null=91/91 types=['str'] sample=['ALFKI', 'ANATR', 'ANTON']
+    - [2] 'CompanyName': non-null=91/91 types=['str'] sample=['Alfreds Futterkiste', 'Ana Trujillo Emparedados y helados', 'Antonio Moreno Taquería']
+    - [3] 'ContactName': non-null=91/91 types=['str'] sample=['Maria Anders', 'Ana Trujillo', 'Antonio Moreno']
+    - [4] 'ContactTitle': non-null=91/91 types=['str'] sample=['Sales Representative', 'Owner', 'Owner']
+    - [5] 'Address': non-null=91/91 types=['str'] sample=['Obere Str. 57', 'Avda. de la Constitución 2222', 'Mataderos  2312']
+    - [6] 'City': non-null=91/91 types=['str'] sample=['Berlin', 'México D.F.', 'México D.F.']
+    - [7] 'Region': non-null=31/91 types=['str'] sample=['BC', 'SP', 'SP']
+    - [8] 'PostalCode': non-null=90/91 types=['str'] sample=['12209', '05021', '05023']
+    - [9] 'Country': non-null=91/91 types=['str'] sample=['Germany', 'Mexico', 'Mexico']
+    - [10] 'Phone': non-null=91/91 types=['str'] sample=['030-0074321', '(5) 555-4729', '(5) 555-3932']
+    - [11] 'Fax': non-null=69/91 types=['str'] sample=['030-0076545', '(5) 555-3745', '(171) 555-6750']
+
+[Employees] rows=9 (excl. header) cols=17
+    - [1] 'EmployeeID': non-null=9/9 types=['float'] sample=[1.0, 2.0, 3.0]
+    - [2] 'LastName': non-null=9/9 types=['str'] sample=['Davolio', 'Fuller', 'Leverling']
+    - [3] 'FirstName': non-null=9/9 types=['str'] sample=['Nancy', 'Andrew', 'Janet']
+    - [4] 'Title': non-null=9/9 types=['str'] sample=['Sales Representative', 'Vice President, Sales', 'Sales Representative']
+    - [5] 'TitleOfCourtesy': non-null=9/9 types=['str'] sample=['Ms.', 'Dr.', 'Ms.']
+    - [6] 'BirthDate': non-null=9/9 types=['Timestamp'] sample=[Timestamp('1968-12-08 00:00:00'), Timestamp('1952-02-19 00:00:00'), Timestamp('1963-08-30 00:00:00')]
+    - [7] 'HireDate': non-null=9/9 types=['Timestamp'] sample=[Timestamp('1992-05-01 00:00:00'), Timestamp('1992-08-14 00:00:00'), Timestamp('1992-04-01 00:00:00')]
+    - [8] 'Address': non-null=9/9 types=['str'] sample=['507 - 20th Ave. E.\nApt. 2A', '908 W. Capital Way', '722 Moss Bay Blvd.']
+    - [9] 'City': non-null=9/9 types=['str'] sample=['Seattle', 'Tacoma', 'Kirkland']
+    - [10] 'Region': non-null=5/9 types=['str'] sample=['WA', 'WA', 'WA']
+    - [11] 'PostalCode': non-null=9/9 types=['str'] sample=['98122', '98401', '98033']
+    - [12] 'Country': non-null=9/9 types=['str'] sample=['USA', 'USA', 'USA']
+    - [13] 'HomePhone': non-null=9/9 types=['str'] sample=['(206) 555-9857', '(206) 555-9482', '(206) 555-3412']
+    - [14] 'Extension': non-null=9/9 types=['str'] sample=['5467', '3457', '3355']
+    - [15] 'Photo': non-null=9/9 types=['str'] sample=['EmpID1.bmp', 'EmpID2.bmp', 'EmpID3.bmp']
+    - [16] 'Notes': non-null=9/9 types=['str'] sample=['Education includes a BA in psychology from Colorado State University.  She also completed "The Art of the Cold Call."  Nancy is a member of Toastmasters International.', 'Andrew received his BTS commercial and a Ph.D. in international marketing from the University of Dallas.  He is fluent in French and Italian and reads German.  He joined the company as a sales representative, was promoted to sales manager and was then named vice president of sales.  Andrew is a member of the Sales Management Roundtable, the Seattle Chamber of Commerce, and the Pacific Rim Importers Association.', 'Janet has a BS degree in chemistry from Boston College).  She has also completed a certificate program in food retailing management.  Janet was hired as a sales associate and was promoted to sales representative.']
+    - [17] 'ReportsTo': non-null=8/9 types=['float'] sample=[2.0, 2.0, 2.0]
+
+[Orders Details] rows=2155 (excl. header) cols=5
+    - [1] 'OrderID': non-null=2155/2155 types=['float'] sample=[10248.0, 10248.0, 10248.0]
+    - [2] 'ProductID': non-null=2155/2155 types=['float'] sample=[11.0, 42.0, 72.0]
+    - [3] 'UnitPrice': non-null=2155/2155 types=['float'] sample=[14.0, 9.8, 34.8]
+    - [4] 'Quantity': non-null=2155/2155 types=['float'] sample=[12.0, 10.0, 5.0]
+    - [5] 'Discount': non-null=2155/2155 types=['float'] sample=[0.0, 0.0, 0.0]
+
+[Orders] rows=830 (excl. header) cols=14
+    - [1] 'OrderID': non-null=830/830 types=['float'] sample=[10248.0, 10249.0, 10250.0]
+    - [2] 'CustomerID': non-null=830/830 types=['str'] sample=['WILMK', 'TRADH', 'HANAR']
+    - [3] 'EmployeeID': non-null=830/830 types=['float'] sample=[5.0, 6.0, 4.0]
+    - [4] 'OrderDate': non-null=830/830 types=['Timestamp'] sample=[Timestamp('1996-07-04 00:00:00'), Timestamp('1996-07-05 00:00:00'), Timestamp('1996-07-08 00:00:00')]
+    - [5] 'RequiredDate': non-null=830/830 types=['Timestamp'] sample=[Timestamp('1996-08-01 00:00:00'), Timestamp('1996-08-16 00:00:00'), Timestamp('1996-08-05 00:00:00')]
+    - [6] 'ShippedDate': non-null=809/830 types=['Timestamp'] sample=[Timestamp('1996-07-16 00:00:00'), Timestamp('1996-07-10 00:00:00'), Timestamp('1996-07-12 00:00:00')]
+    - [7] 'ShipVia': non-null=830/830 types=['float'] sample=[3.0, 1.0, 2.0]
+    - [8] 'Freight': non-null=830/830 types=['float'] sample=[32.38, 11.61, 65.83]
+    - [9] 'ShipName': non-null=830/830 types=['str'] sample=['Vins et alcools Chevalier', 'Toms Spezialitäten', 'Hanari Carnes']
+    - [10] 'ShipAddress': non-null=830/830 types=['str'] sample=["59 rue de l'Abbaye", 'Luisenstr. 48', 'Rua do Paço, 67']
+    - [11] 'ShipCity': non-null=830/830 types=['str'] sample=['Reims', 'Münster', 'Rio de Janeiro']
+    - [12] 'ShipRegion': non-null=323/830 types=['str'] sample=['RJ', 'RJ', 'SP']
+    - [13] 'ShipPostalCode': non-null=811/830 types=['str'] sample=['51100', '44087', '05454-876']
+    - [14] 'ShipCountry': non-null=830/830 types=['str'] sample=['France', 'Germany', 'Brazil']
+
+[Shippers] rows=3 (excl. header) cols=3
+    - [1] 'ShipperID': non-null=3/3 types=['float'] sample=[1.0, 2.0, 3.0]
+    - [2] 'CompanyName': non-null=3/3 types=['str'] sample=['Speedy Express', 'United Package', 'Federal Shipping']
+    - [3] 'Phone': non-null=3/3 types=['str'] sample=['(503) 555-9831', '(503) 555-3199', '(503) 555-9931']
+
+[Product] rows=77 (excl. header) cols=16
+    !! duplicated column names: ['Cheap', 'NewPrice']
+    - [1] 'ProductID': non-null=77/77 types=['float'] sample=[2.0, 1.0, 3.0]
+    - [2] 'ProductName': non-null=77/77 types=['str'] sample=['Chang', 'Chai', 'Aniseed Syrup']
+    - [3] 'SupplierID': non-null=77/77 types=['float'] sample=[1.0, 1.0, 1.0]
+    - [4] 'CategoryID': non-null=77/77 types=['float'] sample=[1.0, 1.0, 2.0]
+    - [5] 'QuantityPerUnit': non-null=77/77 types=['str'] sample=['24 - 12 oz bottles', '10 boxes x 20 bags', '12 - 550 ml bottles']
+    - [6] 'Price': non-null=77/77 types=['float'] sample=[19.0, 18.0, 10.0]
+    - [7] 'Cheap': non-null=77/77 types=['str'] sample=['f', 'f', 'f']
+    - [8] 'NewPrice': non-null=77/77 types=['float'] sample=[20.33, 19.26, 10.7]
+    - [9] 'Cheap': non-null=77/77 types=['float'] sample=[0.0, 0.0, 0.0]
+    - [10] 'UnitsInStock': non-null=77/77 types=['float'] sample=[17.0, 39.0, 13.0]
+    - [11] 'UnitsOnOrder': non-null=77/77 types=['float'] sample=[40.0, 0.0, 70.0]
+    - [12] 'ReorderLevel': non-null=77/77 types=['float'] sample=[25.0, 10.0, 25.0]
+    - [13] 'Discontinued': non-null=77/77 types=['bool'] sample=[False, False, False]
+    - [14] 'IsCheap': non-null=77/77 types=['bool'] sample=[False, False, True]
+    - [15] '<blank col 15>': non-null=0/77 types=[] sample=[]
+    - [16] 'NewPrice': non-null=26/77 types=['float'] sample=[11.0, 11.0, 6.6]
+
+[Suppliers] rows=29 (excl. header) cols=12
+    - [1] 'SupplierID': non-null=29/29 types=['float'] sample=[1.0, 2.0, 3.0]
+    - [2] 'CompanyName': non-null=29/29 types=['str'] sample=['Exotic Liquids', 'New Orleans Cajun Delights', "Grandma Kelly's Homestead"]
+    - [3] 'ContactName': non-null=29/29 types=['str'] sample=['Charlotte Cooper', 'Shelley Burke', 'Regina Murphy']
+    - [4] 'ContactTitle': non-null=29/29 types=['str'] sample=['Purchasing Manager', 'Order Administrator', 'Sales Representative']
+    - [5] 'Address': non-null=29/29 types=['str'] sample=['49 Gilbert St.', 'P.O. Box 78934', '707 Oxford Rd.']
+    - [6] 'City': non-null=29/29 types=['str'] sample=['London', 'New Orleans', 'Ann Arbor']
+    - [7] 'Region': non-null=9/29 types=['str'] sample=['LA', 'MI', 'Asturias']
+    - [8] 'PostalCode': non-null=29/29 types=['str'] sample=['EC1 4SD', '70117', '48104']
+    - [9] 'Country': non-null=29/29 types=['str'] sample=['UK', 'USA', 'USA']
+    - [10] 'Phone': non-null=29/29 types=['str'] sample=['(171) 555-2222', '(100) 555-4822', '(313) 555-5735']
+    - [11] 'Fax': non-null=13/29 types=['str'] sample=['(313) 555-3349', '(03) 444-6588', '031-987 65 91']
+    - [12] 'HomePage': non-null=3/29 types=['str'] sample=["Mayumi's (on the World Wide Web)#http://www.microsoft.com/accessdev/sampleapps/mayumi.htm#", 'Plutzer (on the World Wide Web)#http://www.microsoft.com/accessdev/sampleapps/plutzer.htm#', "G'day Mate (on the World Wide Web)#http://www.microsoft.com/accessdev/sampleapps/gdaymate.htm#"]
+
+====================================================================== 
+2. PRIMARY KEYS
+
+Categories ['CategoryID']: null=0 duplicated_rows=0
+Customers ['CustomerID']: null=0 duplicated_rows=0
+Employees ['EmployeeID']: null=0 duplicated_rows=0
+Orders ['OrderID']: null=0 duplicated_rows=0
+Shippers ['ShipperID']: null=0 duplicated_rows=0
+Product ['ProductID']: null=0 duplicated_rows=0
+Suppliers ['SupplierID']: null=0 duplicated_rows=0
+Orders Details ['OrderID', 'ProductID']: null=0 duplicated_rows=0
+non-integer numeric IDs: none
+
+====================================================================== 
+3. FOREIGN KEYS (child -> parent)
+
+Orders.CustomerID -> Customers.CustomerID: child non-null=830, unmatched rows=0 []; parent keys never referenced=2 ['FISSA', 'PARIS']
+Orders.EmployeeID -> Employees.EmployeeID: child non-null=830, unmatched rows=0 []; parent keys never referenced=0 []
+Orders.ShipVia -> Shippers.ShipperID: child non-null=830, unmatched rows=0 []; parent keys never referenced=0 []
+Orders Details.OrderID -> Orders.OrderID: child non-null=2155, unmatched rows=0 []; parent keys never referenced=0 []
+Orders Details.ProductID -> Product.ProductID: child non-null=2155, unmatched rows=0 []; parent keys never referenced=0 []
+Product.SupplierID -> Suppliers.SupplierID: child non-null=77, unmatched rows=0 []; parent keys never referenced=0 []
+Product.CategoryID -> Categories.CategoryID: child non-null=77, unmatched rows=0 []; parent keys never referenced=0 []
+Employees.ReportsTo -> Employees.EmployeeID: child non-null=8, unmatched rows=0 []; parent keys never referenced=7 ['1', '3', '4', '6', '7', '8', '9']
+Orders.CustomerID unmatched after strip/upper: 0
+orders with no detail lines: 0 []
+detail lines per order: min=1 max=25 mean=2.60
+
+====================================================================== 
+4. DATES
+
+OrderDate range: 1996-07-04 .. 1998-05-06
+  1996: orders=152 months=[7, 8, 9, 10, 11, 12] first=1996-07-04 last=1996-12-31
+  1997: orders=408 months=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] first=1997-01-01 last=1997-12-31
+  1998: orders=270 months=[1, 2, 3, 4, 5] first=1998-01-01 last=1998-05-06
+orders per month:
+OrderDate
+1996-07    22
+1996-08    25
+1996-09    23
+1996-10    26
+1996-11    25
+1996-12    31
+1997-01    33
+1997-02    29
+1997-03    30
+1997-04    31
+1997-05    32
+1997-06    30
+1997-07    33
+1997-08    33
+1997-09    37
+1997-10    38
+1997-11    34
+1997-12    48
+1998-01    55
+1998-02    54
+1998-03    73
+1998-04    74
+1998-05    14
+Freq: M
+ShippedDate missing: 21; their OrderDate range: 1998-04-08 .. 1998-05-06
+ShippedDate range: 1996-07-10 .. 1998-05-06
+ShippedDate < OrderDate: 0; RequiredDate < OrderDate: 0
+shipped after RequiredDate: 37 of 809 shipped
+days order->ship: min=1.0 median=7.0 max=37.0
+Employees.BirthDate: 1952-02-19 .. 1969-07-02
+Employees.HireDate: 1992-04-01 .. 1994-11-15
+
+====================================================================== 
+5. NUMERIC FIELDS
+
+Details.UnitPrice: min=2.0 max=263.5 zero=0 negative=0 null=0
+Details.Quantity: min=1.0 max=130.0 zero=0 negative=0 null=0
+Details.Discount: min=0.0 max=0.25 zero=1317 negative=0 null=0
+Orders.Freight: min=0.02 max=1007.64 zero=0 negative=0 null=0
+Product.Price: min=2.5 max=263.5 zero=0 negative=0 null=0
+Discount values: [0.0, 0.00999999977648258, 0.0199999995529652, 0.0299999993294477, 0.0399999991059303, 0.0500000007450581, 0.0599999986588955, 0.100000001490116, 0.150000005960464, 0.200000002980232, 0.25]
+Quantity non-integer: 0
+Product extra columns (first 8 rows):
+   ProductID  Price Cheap_7  NewPrice_8  Cheap_9  IsCheap  NewPrice_16
+0        2.0  19.00       f     20.3300      0.0    False          NaN
+1        1.0  18.00       f     19.2600      0.0    False          NaN
+2        3.0  10.00       f     10.7000      0.0     True         11.0
+3        4.0  22.00       f     23.5400      0.0    False          NaN
+4        5.0  21.35       f     22.8445      0.0    False          NaN
+5       65.0  21.05       f     22.5235      0.0    False          NaN
+6       66.0  17.00       f     18.1900      0.0    False          NaN
+7        8.0  40.00       f     42.8000      0.0    False          NaN
+NewPrice_8 / Price ratio: count    7.700000e+01
+mean     1.070000e+00
+std      4.470013e-16
+min      1.070000e+00
+25%      1.070000e+00
+50%      1.070000e+00
+75%      1.070000e+00
+max      1.070000e+00
+NewPrice_16 / Price ratio (non-null): 1.1    26
+Cheap_7 values: {'f': 65, 't': 11, 'B': 1} Cheap_9 values: {0.0: 66, 1.0: 11} IsCheap values: {False: 63, True: 14}
+Price where IsCheap True: max 10.0 | False: min 12.0
+Price where NewPrice_16 present: max 15.0 | absent: min 15.5
+Product rows sorted by ProductID? False
+Details.UnitPrice == Product.Price: 1497 of 2155 lines; ratio UnitPrice/Price values: {1.0: 1497, 0.8: 501, 0.799: 54, 0.798: 36, 0.797: 33}
+formula cells: {'Product': (334, [('G2', 'IF(F2<10,"t","f")'), ('H2', 'F2*1.07'), ('I2', 'IF(F2<10,1,0)')])}
+
+====================================================================== 
+6. GRAIN / DOUBLE-COUNT DEMO
+
+distinct orders (Orders)=830  detail lines=2155  distinct OrderID in details=830
+gross sales (UnitPrice*Quantity)=1,354,458.59  net of discount=1,265,793.04
+Freight from Orders (correct grain)=64,942.69
+Freight summed after joining to details (WRONG)=207,306.10
+row count after join=2155 (would be mis-read as order count)
